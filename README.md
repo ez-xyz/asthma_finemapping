@@ -1,1 +1,1 @@
-This respository contains the scripts used to run analyses and make figures in the manuscript, Integration of functional genomics and statistical fine-mapping systematically characterizes adult-onset and childhood-onset asthma genetic associations.
+This repository contains the scripts used to run analyses and make figures in the manuscript, Integration of functional genomics and statistical fine-mapping systematically characterizes adult-onset and childhood-onset asthma genetic associations.
