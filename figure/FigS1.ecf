@@ -1,0 +1,35 @@
+#################################################################################################################
+#################################################################################################################
+
+DEFINE	--pathOut ./plots
+		--acolIn SNP;CHR;POS;P
+		--acolNewName VAR;CHR;POS;P
+		--acolInClasses character;numeric;numeric;numeric
+		
+EASYIN	--fileIn aoa_gwas_EasyStrata.txt.gz --fileInTag ADULTS
+EASYIN	--fileIn coa_gwas_EasyStrata.txt.gz --fileInTag CHILDREN
+
+#####################################################################################################################################################
+#####################################################################################################################################################
+## EASYSTRATA Scripting interface:
+START EASYSTRATA
+
+## Merge two input files:
+MERGEEASYIN --colInMarker VAR --blnMergeAll 0
+
+MIAMIPLOT
+      --colMIAMIPlotUp P.CHILDREN
+      --colMIAMIPlotDown P.ADULTS
+      --colInChr CHR.ADULTS
+      --colInPos POS.ADULTS
+      --numWidth 2400
+      --numHeight 1200
+      --astrDefaultColourChrUp #D69F33;#F3BC50
+      --astrDefaultColourChrDown #068D91;#00B6BC
+      --blnYAxisBreak 1
+      --numYAxisBreak 22
+      --strFormat png
+
+STOP EASYSTRATA
+#################################################################################################################
+#################################################################################################################
