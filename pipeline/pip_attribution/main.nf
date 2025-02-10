@@ -19,10 +19,6 @@ process finemapping {
 
   script:
   """
-  module unload java
-  module load gsl
-  module load gcc
-  module load R/4.2.0
   Rscript 1_finemapping.R \
     --gwas $gwas \
     --prior $prior \
@@ -51,8 +47,6 @@ process get_cs_info {
 
   script:
   """
-  module unload java
-  module load R/4.2.0
   Rscript 2_get_cs_info.R \
     --res $susie_res \
     --sumstats $susie_sumstats \
@@ -77,8 +71,6 @@ process pip_attribution {
 
   script:
   """
-  module unload java
-  module load R/4.2.0
   Rscript 3_pip_attribution.R \
     --cs $cs_list \
     --annot $annot \

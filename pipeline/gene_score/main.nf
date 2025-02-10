@@ -43,8 +43,6 @@ process calculate_gene_score {
 
   script:
   """
-  module unload java
-  module load R/4.2.0
   Rscript 2_calculate_gene_score.R \
     --pip-cutoff $pip_cutoff \
     --score-cutoff $score_cutoff \

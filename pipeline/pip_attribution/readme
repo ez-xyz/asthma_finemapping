@@ -1,0 +1,71 @@
+Note: example for each input file will be made available on Zenodo upon publication.
+
+gwas
+GWAS summary statistics
+A data frame with 10 columns: chr, pos, beta, se, a0, a1, snp, pval, zscore, locus
+chr: an integer; chromosome number (1,...,22)
+pos: an integer; snp base pair position
+beta: a number; snp effect size estimate
+se: a number; snp effect size standard error
+a0: a string; non-effect allele
+a1: a string; effect allele
+snp: a string; snp id
+pval: a number; snp p-value
+zscore: a number; snp z-score
+locus: an integer; locus id 
+
+prior
+Prior causal probability of each SNP in GWAS summary statistics
+A named vector of numbers, where the names are the ids of the SNPs.
+
+locus
+Loci to be fine-mapped
+A vector of integers.
+
+ldr
+LD matrices for fine-mapping
+A named vector of strings, where the names are the locus ids. The values are the paths to LD matrices of the corresponding loci.
+
+rvar
+Information of SNPs in the LD matrices
+A named vector of strings, where the names are the locus ids. The values are the paths to SNP information of LD matrices of the corresponding loci.
+
+n
+GWAS sample size
+An integer.
+
+L
+Maximum number of non-zero effects in the susie regression model (at most 10)
+An integer.
+
+purity
+Minimum absolute correlation allowed in a credible set
+A number betwen 0 and 1.
+
+outname
+Output name
+A string.
+
+outdir
+Output directory
+A string.
+
+geneinfo
+Path to gene information
+A string that points to the gene annotation file.
+
+annot
+Path to annotations for PIP attribution (e.g.: open chromatin regions in different cell types)
+A string that points to the annotation file. The annotation file should contain a list of GRanges objects, where each element of the list corresponds to genomic region covered by an annotation.
+
+weight
+Path to weight for PIP attribution
+A string that points to the weight file. The weight file should contain a named vector of numbers, where the names are the annotations and the values are the weights.
+
+pt
+ggplot font size
+An integer.
+
+palette
+ggsci (https://nanx.me/ggsci/index.html) palette name.
+A string.

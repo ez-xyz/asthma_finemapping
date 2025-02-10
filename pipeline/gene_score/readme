@@ -1,0 +1,53 @@
+Note: example for each input file will be made available on Zenodo upon publication.
+
+bedtools_dir
+Path to bedtools executable
+A string.
+
+cre
+Path to cis-regulatory element .bed file
+A string that points to a .bed file with five columns: chromosome, start, end, cell types, and cell type groups. Each row is a candidate CRE.
+
+snp
+Path to fine-mapped SNPs
+A string that points to a data frame with five columns: chromosome, start, end, snp id, and snp PIP. Each row is a SNP.
+
+pip_cutoff
+Minimum PIP of SNPs for calcualting gene scores
+A number between 0 and 1.
+
+score_cutoff
+Gene score cutoff for defining high-confidence putative causal gene
+A number.
+
+contact
+Path to chromatin contact files for linking CREs to genes
+A string that points to a data frame with two columns: data_type and data_path.
+
+qtl
+Path to QTL files for linking CREs to genes
+A string that points to a data frame with two columns: data_type and data_path.
+
+exonic
+Path to fine-mapped SNPs in exons
+A string that points to a data frame with three columns: snp, snp_pip, and gene_exon.
+
+nearest
+Path to the nearest gene of each candidate CRE
+A string that points to a data frame with two columns: cre, nearest_gene
+
+plot_params
+Path to ggplot parameters
+A string that points to a list with three elements: high - a string which is the hex code of the color for high-score genes; breaks - either NULL or a vector of numbers that corresponds to the "breaks" argument in the scale_fill_gradient() function; limits - either NULL or a vector of two numbers that corresponds to the "limits" argument in the scale_fill_gradient() function.
+
+gene_info
+Path to gene information
+A string that points to the gene annotation file.
+
+outname
+Output name
+A string.
+
+outdir
+Output directory
+A string.
