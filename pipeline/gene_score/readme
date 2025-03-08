@@ -1,4 +1,4 @@
-Note: example for each input file will be made available on Zenodo upon publication.
+Example data files are available through Zenodo: https://doi.org/10.5281/zenodo.14842007
 
 bedtools_dir
 Path to bedtools executable
